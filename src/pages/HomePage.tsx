@@ -78,7 +78,7 @@ const HomePage: React.FC = () => {
             <div className="relative animate-fade-in">
               <div className="relative">
                 <img
-                  src="https://images.pexels.com/photos/1132047/pexels-photo-1132047.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  src="https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774?auto=compress&cs=tinysrgb&w=600"
                   alt="Fresh groceries and produce"
                   className="w-full h-80 md:h-96 object-cover rounded-2xl shadow-soft"
                 />
@@ -101,7 +101,7 @@ const HomePage: React.FC = () => {
             <div className="flex items-center justify-center space-x-2">
               <div className="w-2 h-2 bg-primary-500 rounded-full"></div>
               <p className="text-gray-700 font-medium">
-                Free delivery on orders above KES 1,000
+                Free delivery on orders above KES 5,000
               </p>
               <div className="w-2 h-2 bg-primary-500 rounded-full"></div>
             </div>

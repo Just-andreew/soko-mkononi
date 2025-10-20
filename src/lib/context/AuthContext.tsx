@@ -44,11 +44,11 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       // Admin credentials for demo
-      const isAdmin = email === 'admin@sokomotaani.co.ke' && password === 'admin123';
+      const isAdmin = email === 'Brianomosh2580@gmail.com' && password === 'Brizi2580';
       
       const userData: User = {
         id: isAdmin ? 'admin-1' : 'user-1',
-        name: isAdmin ? 'Shop Owner' : 'John Doe',
+        name: isAdmin ? 'Shop Owner' : 'Brian Omondi',
         email,
         phone: '+254712345678',
         isAdmin,

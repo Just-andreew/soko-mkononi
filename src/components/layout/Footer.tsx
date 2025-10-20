@@ -117,7 +117,7 @@ const Footer: React.FC = () => {
             </div>
             <div className="mt-4 p-3 bg-primary-600 rounded-lg">
               <p className="text-white text-sm font-medium">
-                Free delivery for orders above KES 1,000
+                Free delivery for orders above KES 5,000
               </p>
             </div>
           </div>
