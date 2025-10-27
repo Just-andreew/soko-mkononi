@@ -235,7 +235,7 @@ const HomePage: React.FC = () => {
               Meet {businessSettings.ownerName}, Your Local Grocer
             </h2>
             <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-              We're a local Parklands vendor delivering fresh produce since 2020. 
+              We're a local Parklands vendor delivering fresh produce since 2015. 
               Our mission is to bring you the freshest groceries at the best prices, 
               delivered right to your doorstep.
             </p>
@@ -246,7 +246,7 @@ const HomePage: React.FC = () => {
             <div className="space-y-3 text-left">
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-primary-500" />
-                <span>+254 712 345 678</span>
+                <span>+254 745 922 687</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MessageCircle className="h-5 w-5 text-primary-500" />

@@ -1,10 +1,12 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import bcrypt from 'bcryptjs';
 
 interface User {
   id: string;
   name: string;
   email: string;
   phone: string;
+  password?: string;
   isAdmin?: boolean;
 }
 
@@ -50,13 +52,14 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         id: isAdmin ? 'admin-1' : 'user-1',
         name: isAdmin ? 'Shop Owner' : 'Brian Omondi',
         email,
-        phone: '+254712345678',
+        phone: '+254745922687',
         isAdmin,
       };
       
       setUser(userData);
       localStorage.setItem('soko-user', JSON.stringify(userData));
     } catch (error) {
+      console.error('Login failed:', error);
       throw new Error('Invalid credentials');
     } finally {
       setIsLoading(false);
@@ -66,6 +69,13 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const signup = async (name: string, email: string, phone: string, password: string) => {
     setIsLoading(true);
     try {
+      const hashedPassword = bcrypt.hashSync(password, 10);
+
+      // Validate password length
+      if (password.length < 6) {
+        throw new Error('Password must be at least 6 characters long');
+      }
+
       // Mock signup - replace with actual API call
       await new Promise(resolve => setTimeout(resolve, 1000));
       
@@ -74,11 +84,13 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         name,
         email,
         phone,
+        password: hashedPassword,
       };
       
       setUser(userData);
       localStorage.setItem('soko-user', JSON.stringify(userData));
     } catch (error) {
+      console.error('Signup failed:', error);
       throw new Error('Signup failed');
     } finally {
       setIsLoading(false);

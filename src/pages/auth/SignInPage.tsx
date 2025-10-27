@@ -38,6 +38,7 @@ const SignInPage: React.FC = () => {
       showToast('Welcome back!', 'success');
       navigate(from);
     } catch (error) {
+      console.error(error);
       showToast('Invalid email or password', 'error');
     } finally {
       setIsLoading(false);
@@ -65,7 +66,7 @@ const SignInPage: React.FC = () => {
         </div>
 
         <Card>
-          {/* Demo Credentials */}
+          {/*
           <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
             <p className="text-sm font-medium text-blue-900 mb-2">Demo Credentials:</p>
             <div className="text-xs text-blue-800 space-y-1">
@@ -73,6 +74,7 @@ const SignInPage: React.FC = () => {
               <p><strong>Admin:</strong> admin@sokomotaani.co.ke / admin123</p>
             </div>
           </div>
+          */}
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
